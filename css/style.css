@@ -77,6 +77,10 @@ div#l2 {
   line-height: 1.5;
   overflow: auto;
 }
+/* スクロールバー非表示 */
+div#l2::-webkit-scrollbar{
+  display:none;
+}
 
 .memo {
   border-top: 1px solid white;
@@ -84,6 +88,27 @@ div#l2 {
 
 .memo:first-child {
   border-top: none;
+}
+
+/* メモ表示欄 */
+.display {
+  display: flex;
+  justify-content: left;
+}
+/* title */
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+/* 日付 */
+span.date {
+  margin: 0 16px 0 0px;
+}
+/* text */
+span.text {
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 
@@ -100,3 +125,59 @@ div#footer {
   bottom: 5px;
   width: 100%;
 }
+/* 新規作成 */
+span#f2 {
+  color: #dede7d;
+  cursor: pointer;
+}
+
+span#f2:hover {
+  opacity: 0.5;
+}
+
+
+
+/* input.php */
+/* ◁メモ */
+span#back {
+  padding-top: 6px;
+  cursor: pointer;
+}
+span#back:hover {
+  opacity: 0.7;
+}
+
+
+/* 完了 */
+input[type="submit"] {
+  color: #dede7d;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+/* タイトル */
+input[type="text"] {
+  background-color: black;
+  font-size: 22px;
+  width: 100%;
+  height: auto;
+  margin: 5px 0;
+  color: white;
+  caret-color: #dede7d;
+}
+/* text */
+textarea#text {
+  background-color: black;
+  font-size: 22px;
+  width: 100%;
+  height: auto;
+  margin: 5px 0;
+  color: white;
+  caret-color: #dede7d;
+  }

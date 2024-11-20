@@ -60,15 +60,17 @@
               $memos[] =$memo; 
             }
             fclose($file);
+            // 配列を逆順に並べ替え
+            $memos = array_reverse($memos);
             // メモ表示
             foreach($memos as $memo){
           ?>
           <div class="memo">
-          <form action="input.php" method="post">
-            <div class="title" name=""><?php echo $memo->getTitle()?></div>
-            <span class="date"><?php echo $memo->getDate()?></span>
-            <span class="text"><?php echo $memo->getText()?></span>
-          </form>
+            <div class="title"><?php echo $memo->getTitle()?></div>
+            <div class="display">
+              <span class="date"><?php echo $memo->getDate()?></span>
+              <span class="text"><?php echo $memo->getText()?></span>
+          </div>
           </div>
           <?php 
             }
@@ -76,7 +78,7 @@
       </div>
     <!-- footer -->
       <div id="footer">
-        <span id="f1">○○件のメモ</span>
+        <!-- <span id="f1">○○件のメモ</span> -->
         <span id="f2"><a href="../php/input.php">新規作成</a></span>
       </div>
   </body>

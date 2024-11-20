@@ -1,28 +1,3 @@
-<?php
-// リクエストボディを取得
-$jsonData = file_get_contents('php://input');
-
-// JSONデータをデコードして連想配列に変換
-$data = json_decode($jsonData, true);
-
-// 受信データを確認
-if ($data === null) {
-    error_log('JSONデコードエラー: ' . json_last_error_msg());
-    $data = []; // 空の配列として扱う
-}
-
-// デコードしたデータからtitle, date, textを取得
-$title = $data['title'] ?? '';
-$date = $data['date'] ?? '';
-$text = $data['text'] ?? '';
-
-// デバッグ用にデータを出力
-var_dump($data);
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -45,11 +20,15 @@ var_dump($data);
 <body>
 <form action="data.php" method="post">
     <div id="header">
-        <input type="submit" value="完了" id="">
+        <span id="back"><a href="index.php">◁メモ</a></span>
+        <span id="submit">
+            <input type="submit" value="完了">
+        </span>
     </div>
     <div id="content">
-        <div id="title"><input type="text" name="title" value="<?php echo htmlspecialchars($title); ?>"></div>
-        <div id="text"><textarea name="text" id="text"><?php echo htmlspecialchars($text); ?></textarea></div>
+        <div id="title"><input type="text" name="title"></div>
+        <div id="text"><textarea name="text" id="text" rows="4" cols="30"
+        ></textarea></div>
     </div>
 </form>
 
