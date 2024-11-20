@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: black;
+    color: white;
+}
+
+div#header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 5px;
+    font-size: 16px;
+    color: #dede7d;
+}
+
+
+input[type="text"]{
+    background-color: black;
+    font-size: 22px;
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+    color: white;
+}
+
+
+textarea#text {
+    background-color: black;
+    font-size: 22px;
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+    color: white;
+}

@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+  }
+
+  
+body {
+    background-color: black;
+    color: white;
+}
+
+/* header */
+div#header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5px;
+  font-size: 16px;
+  color: #dede7d;
+}
+div#s1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 13px 0px 0px 11px;
+  height: 37px;
+  padding-top: 10px;
+}
+div#s2 {
+  height: 36px;
+  padding-top: 6px;
+  margin: 0px auto;
+  width: 80%;
+  display: flex;
+}
+
+/* search */
+input#site-search {
+  width: 100%;
+  background-color: #7b7979;
+  border-radius: 7px 0px 0px 7px;
+  color: white;
+}
+input#site-search::placeholder {
+  color: white;
+}
+
+button#searchButton {
+  height: 27px;
+  width: auto;
+  margin: 3px -2px;
+  background-color: #7b7979;
+  border: none;
+  color: white;
+  border-radius: 0px 7px 7px 0px;
+}
+
+/* pin */
+div#p1 {
+  height: auto;
+  margin: 14px 15px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* 過去7日間 */
+div#l1 {
+  height: auto;
+  margin: 14px 15px;
+  font-size: 18px;
+  font-weight: 900;
+}
+/* class内 */
+div#l2 {
+  width: 80%;
+  height: 440px;
+  background-color: #7b7979;
+  border-radius: 7px;
+  margin: 0 auto;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.memo {
+  border-top: 1px solid white;
+}
+
+.memo:first-child {
+  border-top: none;
+}
+
+
+
+
+/* footer */
+div#footer {
+  height: 30px;
+  background-color: #1f1e1e;
+  padding-top: 9px;
+  text-align: center;
+  font-size: 12px;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+}
